@@ -5,7 +5,7 @@ AWS_REGION="ap-southeast-1"    # As per AWS specified given name
 S3_BUCKET_NAME=""              # AWS bucket name where the ecr backup's are stored
 REPOSITORIES=""                # Write one or more repository name like "repo1 repo2 repo3"
 AWS_ACCOUNT_ID=""              # AWS account ID
-REGION_NAME=""                 # Noramal Region name in words
+REGION_NAME=""                 # Normal Region name in words
 
 # Authenticate Docker with ECR
 aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.$AWS_REGION.amazonaws.com
